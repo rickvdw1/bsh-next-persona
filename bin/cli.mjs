@@ -89,7 +89,9 @@ async function install(input) {
   console.log(`\nOpen Claude Code and talk to them:`);
   console.log(`  • /${persona.slug} <your question>`);
   console.log(`  • or @${persona.slug} in a message`);
-  console.log(`\nRemove later with:  npx @bsh/next-persona uninstall ${persona.slug}`);
+  console.log(
+    `\nRemove later with:  npx github:rickvdw1/bsh-next-persona uninstall ${persona.slug}`,
+  );
 }
 
 function uninstall(slug) {
