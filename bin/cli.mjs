@@ -2,8 +2,8 @@
 /**
  * @bsh/next-persona — install a BSH customer persona into Claude Code.
  *
- *   npx @bsh/next-persona install jonas-7QX4K2
- *   npx @bsh/next-persona uninstall jonas
+ *   npx @bsh/next-persona install <persona>-<code>
+ *   npx @bsh/next-persona uninstall <persona>
  *
  * `install` redeems the one-time code with the BSH persona service, then:
  *   - registers a per-user MCP server pointing at the service (with your token),
@@ -34,15 +34,15 @@ try {
 function usage() {
   console.log(`BSH persona installer
 
-  npx @bsh/next-persona install <slug>-<code>     e.g. install jonas-7QX4K2
-  npx @bsh/next-persona uninstall <slug>          e.g. uninstall jonas
+  npx @bsh/next-persona install <persona>-<code>     e.g. install <persona>-A1B2C3
+  npx @bsh/next-persona uninstall <persona>          e.g. uninstall <persona>
 
 Requires Claude Code (the \`claude\` CLI) to be installed.`);
   process.exit(cmd ? 1 : 0);
 }
 
 async function install(input) {
-  if (!input) throw new Error("Provide an install code, e.g. `install jonas-7QX4K2`.");
+  if (!input) throw new Error("Provide an install code, e.g. `install <persona>-A1B2C3`.");
   process.stdout.write("→ Redeeming your install code… ");
   const res = await fetch(`${SERVICE}/api/install/redeem`, {
     method: "POST",
@@ -95,7 +95,7 @@ async function install(input) {
 }
 
 function uninstall(slug) {
-  if (!slug) throw new Error("Provide the persona slug, e.g. `uninstall jonas`.");
+  if (!slug) throw new Error("Provide the persona slug, e.g. `uninstall <persona>`.");
   const server = `bsh-${slug}`;
   ensureClaudeCli();
   try {

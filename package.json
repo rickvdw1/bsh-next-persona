@@ -1,7 +1,7 @@
 {
   "name": "bsh-next-persona",
   "version": "0.1.0",
-  "description": "Install a BSH customer persona (e.g. Jonas) into Claude Code — grounded live in NEXT AI customer feedback via MCP.",
+  "description": "Install a BSH customer persona into Claude Code — grounded live in NEXT AI customer feedback via MCP.",
   "type": "module",
   "bin": {
     "bsh-next-persona": "bin/cli.mjs"
