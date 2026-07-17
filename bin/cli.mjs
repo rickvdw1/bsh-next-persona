@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * @bsh/next-persona — install a BSH customer persona into Claude Code.
+ * mcp-next-persona — install a BSH customer persona into Claude Code.
  *
- *   npx @bsh/next-persona install <persona>-<code>
- *   npx @bsh/next-persona uninstall <persona>
+ *   npx github:rickvdw1/mcp-next-persona install <persona>-<code>
+ *   npx github:rickvdw1/mcp-next-persona uninstall <persona>
  *
  * `install` redeems the one-time code with the BSH persona service, then:
  *   - registers a per-user MCP server pointing at the service (with your token),
@@ -34,8 +34,8 @@ try {
 function usage() {
   console.log(`BSH persona installer
 
-  npx @bsh/next-persona install <persona>-<code>     e.g. install <persona>-A1B2C3
-  npx @bsh/next-persona uninstall <persona>          e.g. uninstall <persona>
+  npx github:rickvdw1/mcp-next-persona install <persona>-<code>     e.g. install <persona>-A1B2C3
+  npx github:rickvdw1/mcp-next-persona uninstall <persona>          e.g. uninstall <persona>
 
 Requires Claude Code (the \`claude\` CLI) to be installed.`);
   process.exit(cmd ? 1 : 0);
@@ -90,7 +90,7 @@ async function install(input) {
   console.log(`  • /${persona.slug} <your question>`);
   console.log(`  • or @${persona.slug} in a message`);
   console.log(
-    `\nRemove later with:  npx github:rickvdw1/bsh-next-persona uninstall ${persona.slug}`,
+    `\nRemove later with:  npx github:rickvdw1/mcp-next-persona uninstall ${persona.slug}`,
   );
 }
 

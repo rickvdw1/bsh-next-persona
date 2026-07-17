@@ -1,4 +1,4 @@
-# bsh-next-persona
+# mcp-next-persona
 
 Install a **BSH customer persona** into **Claude Code** — an AI customer
 grounded live in real NEXT AI customer feedback, callable via `/<persona>`
@@ -9,10 +9,10 @@ persona you're installing (`<persona>-<code>`).
 
 ```bash
 # Install (requires Claude Code — the `claude` CLI — on your PATH):
-npx github:rickvdw1/bsh-next-persona install <persona>-<code>
+npx github:rickvdw1/mcp-next-persona install <persona>-<code>
 
 # Remove:
-npx github:rickvdw1/bsh-next-persona uninstall <persona>
+npx github:rickvdw1/mcp-next-persona uninstall <persona>
 ```
 
 What it does:
