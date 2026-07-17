@@ -1,6 +1,6 @@
 # mcp-next-persona
 
-Install a **BSH customer persona** into **Claude Code** — an AI customer
+Install a **NEXT-native customer persona** into **Claude Code** — an AI customer
 grounded live in real NEXT AI customer feedback, callable via `/<persona>`
 or `@<persona>`.
 
